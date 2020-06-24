@@ -26,7 +26,7 @@ router.post('/api/workouts', ({ body }, res) => {
 });
 
 router.get('/api/workouts/range', async (req, res) => {
-  res.json(await db.Workout.find());
+  res.json(await db.Workout.find().limit(7));
 })
 
 module.exports = router;
